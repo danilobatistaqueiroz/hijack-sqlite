@@ -1,10 +1,10 @@
 import { registerPlugin } from '@capacitor/core';
 
-import type { HijackPluginPlugin } from './definitions';
+import type { HijackSqlitePlugin } from './definitions';
 
-const HijackPlugin = registerPlugin<HijackPluginPlugin>('HijackPlugin', {
-  web: () => import('./web').then(m => new m.HijackPluginWeb()),
+const HijackSqlite = registerPlugin<HijackSqlitePlugin>('HijackSqlite', {
+  web: () => import('./web').then(m => new m.HijackSqliteWeb()),
 });
 
 export * from './definitions';
-export { HijackPlugin };
+export { HijackSqlite };
